@@ -1,0 +1,116 @@
+[debug] [2025-05-06T06:20:30.484Z] ----------------------------------------------------------------------
+[debug] [2025-05-06T06:20:30.490Z] Command:       /usr/local/bin/firebase /Users/choiyujin/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/bin/firebase serve
+[debug] [2025-05-06T06:20:30.491Z] CLI Version:   14.2.2
+[debug] [2025-05-06T06:20:30.491Z] Platform:      darwin
+[debug] [2025-05-06T06:20:30.491Z] Node Version:  v20.18.2
+[debug] [2025-05-06T06:20:30.491Z] Time:          Tue May 06 2025 15:20:30 GMT+0900 (Korean Standard Time)
+[debug] [2025-05-06T06:20:30.492Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-05-06T06:20:30.706Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-05-06T06:20:30.708Z] > authorizing via signed-in user (chmh3370@gmail.com)
+[debug] [2025-05-06T06:20:30.709Z] [iam] checking project nabi-7db09 for permissions ["firebase.projects.get"]
+[debug] [2025-05-06T06:20:30.710Z] Checked if tokens are valid: true, expires at: 1746514746089
+[debug] [2025-05-06T06:20:30.710Z] Checked if tokens are valid: true, expires at: 1746514746089
+[debug] [2025-05-06T06:20:30.711Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/nabi-7db09:testIamPermissions [none]
+[debug] [2025-05-06T06:20:30.711Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/nabi-7db09:testIamPermissions x-goog-quota-user=projects/nabi-7db09
+[debug] [2025-05-06T06:20:30.712Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/nabi-7db09:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2025-05-06T06:20:31.092Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/nabi-7db09:testIamPermissions 200
+[debug] [2025-05-06T06:20:31.092Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/nabi-7db09:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2025-05-06T06:20:31.093Z] Checked if tokens are valid: true, expires at: 1746514746089
+[debug] [2025-05-06T06:20:31.093Z] Checked if tokens are valid: true, expires at: 1746514746089
+[debug] [2025-05-06T06:20:31.094Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/projects/nabi-7db09 [none]
+[debug] [2025-05-06T06:20:31.696Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/projects/nabi-7db09 200
+[debug] [2025-05-06T06:20:31.697Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/projects/nabi-7db09 {"projectNumber":"166488906299","projectId":"nabi-7db09","lifecycleState":"ACTIVE","name":"Nabi","labels":{"firebase":"enabled","firebase-core":"disabled"},"createTime":"2025-04-30T13:35:23.085395Z"}
+[info] 
+[info] === Serving from '/Users/choiyujin'...
+[info] 
+[debug] [2025-05-06T06:20:31.727Z] defaultcredentials: writing to file /Users/choiyujin/.config/firebase/chmh3370_gmail_com_application_default_credentials.json
+[debug] [2025-05-06T06:20:31.731Z] Setting GAC to /Users/choiyujin/.config/firebase/chmh3370_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /Users/choiyujin/.config/firebase/chmh3370_gmail_com_application_default_credentials.json"}}
+[debug] [2025-05-06T06:20:31.731Z] Checked if tokens are valid: true, expires at: 1746514746089
+[debug] [2025-05-06T06:20:31.731Z] Checked if tokens are valid: true, expires at: 1746514746089
+[debug] [2025-05-06T06:20:31.731Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/nabi-7db09/adminSdkConfig [none]
+[debug] [2025-05-06T06:20:32.206Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/nabi-7db09/adminSdkConfig 200
+[debug] [2025-05-06T06:20:32.207Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/nabi-7db09/adminSdkConfig {"projectId":"nabi-7db09","databaseURL":"https://nabi-7db09-default-rtdb.asia-southeast1.firebasedatabase.app","storageBucket":"nabi-7db09.firebasestorage.app"}
+[info] i  functions: Watching "/Users/choiyujin/functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"/Users/choiyujin/functions\" for Cloud Functions..."}}
+[debug] [2025-05-06T06:20:32.230Z] Customer code is not Node
+[debug] [2025-05-06T06:20:32.233Z] Validating python source
+[debug] [2025-05-06T06:20:32.233Z] Building python source
+[debug] [2025-05-06T06:20:32.236Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-05-06T06:20:32.245Z] Running command with virtualenv: command=., args=["\"/Users/choiyujin/functions/venv/bin/activate\"","&&","python3.12","-c","\"import firebase_functions; import os; print(os.path.dirname(firebase_functions.__file__))\""]
+[debug] [2025-05-06T06:20:32.301Z] stdout: /Users/choiyujin/functions/venv/lib/python3.12/site-packages/firebase_functions
+
+[debug] [2025-05-06T06:20:32.304Z] Running admin server with args: ["python3.12","\"/Users/choiyujin/functions/venv/lib/python3.12/site-packages/firebase_functions/private/serving.py\""] and env: {"GCLOUD_PROJECT":"nabi-7db09","K_REVISION":"1","PORT":"80","GOOGLE_CLOUD_QUOTA_PROJECT":"nabi-7db09","FUNCTIONS_EMULATOR":"true","TZ":"UTC","FIREBASE_DEBUG_MODE":"true","FIREBASE_DEBUG_FEATURES":"{\"skipTokenVerification\":true,\"enableCors\":true}","FIREBASE_CONFIG":"{\"storageBucket\":\"nabi-7db09.firebasestorage.app\",\"databaseURL\":\"https://nabi-7db09-default-rtdb.asia-southeast1.firebasedatabase.app\",\"projectId\":\"nabi-7db09\"}","GOOGLE_APPLICATION_CREDENTIALS":"/Users/choiyujin/.config/firebase/chmh3370_gmail_com_application_default_credentials.json","ADMIN_PORT":"8081"} in /Users/choiyujin/functions
+[debug] [2025-05-06T06:20:32.305Z] Running command with virtualenv: command=., args=["\"/Users/choiyujin/functions/venv/bin/activate\"","&&","python3.12","\"/Users/choiyujin/functions/venv/lib/python3.12/site-packages/firebase_functions/private/serving.py\""]
+[info]  * Serving Flask app 'serving'
+ * Debug mode: off
+
+[error] WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:8081
+
+[error] Press CTRL+C to quit
+
+[error] 127.0.0.1 - - [06/May/2025 06:20:32] "GET /__/functions.yaml HTTP/1.1" 200 -
+
+[debug] [2025-05-06T06:20:32.835Z] Got response from /__/functions.yaml endpoints:
+  on_request_example:
+    availableMemoryMb: null
+    concurrency: null
+    entryPoint: on_request_example
+    httpsTrigger: {}
+    ingressSettings: null
+    labels: {}
+    maxInstances: null
+    minInstances: null
+    platform: gcfv2
+    secretEnvironmentVariables: []
+    serviceAccountEmail: null
+    timeoutSeconds: null
+params: []
+requiredAPIs: []
+specVersion: v1alpha1
+
+[error] 127.0.0.1 - - [06/May/2025 06:20:32] "GET /__/quitquitquit HTTP/1.1" 200 -
+
+[error] /bin/sh: line 1:  2217 Terminated: 15          python3.12 "/Users/choiyujin/functions/venv/lib/python3.12/site-packages/firebase_functions/private/serving.py"
+
+[info] ✔  functions: Loaded functions definitions from source: on_request_example. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: on_request_example."}}
+[info] ✔  functions[us-central1-on_request_example]: http function initialized (http://localhost:5000/nabi-7db09/us-central1/on_request_example). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://localhost:5000/nabi-7db09/us-central1/on_request_example)."}}
+[debug] [2025-05-06T06:21:52.963Z] [work-queue] {"queuedWork":["/nabi-7db09/us-central1/on_request_example)-2025-05-06T06:21:52.963Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2025-05-06T06:21:52.964Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/nabi-7db09/us-central1/on_request_example)-2025-05-06T06:21:52.963Z"],"workRunningCount":1}
+[debug] [2025-05-06T06:21:52.969Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2025-05-06T06:22:00.013Z] [work-queue] {"queuedWork":["/nabi-7db09/us-central1/on_request_example-2025-05-06T06:22:00.013Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2025-05-06T06:22:00.013Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/nabi-7db09/us-central1/on_request_example-2025-05-06T06:22:00.013Z"],"workRunningCount":1}
+[debug] [2025-05-06T06:22:00.014Z] Accepted request GET /nabi-7db09/us-central1/on_request_example --> us-central1-on_request_example
+[debug] [2025-05-06T06:22:00.019Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2025-05-06T06:22:00.022Z] [functions] Got req.url=/nabi-7db09/us-central1/on_request_example, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/nabi-7db09/us-central1/on_request_example, mapping to path=/"}}
+[debug] [2025-05-06T06:22:00.026Z] Running command with virtualenv: command=., args=["\"/Users/choiyujin/functions/venv/bin/activate\"","&&","functions-framework"]
+[debug] [2025-05-06T06:22:00.028Z] [worker-pool] addWorker(us-central1-on_request_example) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-on_request_example)"}}
+[debug] [2025-05-06T06:22:00.030Z] [worker-pool] Adding worker with key us-central1-on_request_example, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-on_request_example, total=1"}}
+[debug] [2025-05-06T06:22:00.754Z] [worker-us-central1-on_request_example-d4b9ed5f-16dd-4743-abce-7444009396b1]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"[worker-us-central1-on_request_example-d4b9ed5f-16dd-4743-abce-7444009396b1]: IDLE"}}
+[debug] [2025-05-06T06:22:00.755Z] [worker-pool] submitRequest(triggerId=us-central1-on_request_example) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-on_request_example)"}}
+[info] i  functions: Beginning execution of "us-central1-on_request_example" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"Beginning execution of \"us-central1-on_request_example\""}}
+[debug] [2025-05-06T06:22:00.755Z] [worker-us-central1-on_request_example-d4b9ed5f-16dd-4743-abce-7444009396b1]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"[worker-us-central1-on_request_example-d4b9ed5f-16dd-4743-abce-7444009396b1]: BUSY"}}
+[debug] [2025-05-06T06:22:00.758Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-on_request_example" in 4.583084ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"Finished \"us-central1-on_request_example\" in 4.583084ms"}}
+[debug] [2025-05-06T06:22:00.760Z] [worker-us-central1-on_request_example-d4b9ed5f-16dd-4743-abce-7444009396b1]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"[worker-us-central1-on_request_example-d4b9ed5f-16dd-4743-abce-7444009396b1]: IDLE"}}
+[debug] [2025-05-06T06:22:00.760Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2025-05-06T06:22:00.760Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2025-05-06T06:22:00.760Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2025-05-06T06:22:00.806Z] Functions emulator received unknown request at path /favicon.ico
+[debug] [2025-05-06T06:22:19.413Z] [work-queue] {"queuedWork":["/nabi-7db09/us-central1/on_request_example)-2025-05-06T06:22:19.412Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2025-05-06T06:22:19.424Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/nabi-7db09/us-central1/on_request_example)-2025-05-06T06:22:19.412Z"],"workRunningCount":1}
+[debug] [2025-05-06T06:22:19.430Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2025-05-06T06:22:23.216Z] [work-queue] {"queuedWork":["/nabi-7db09/us-central1/on_request_example-2025-05-06T06:22:23.216Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2025-05-06T06:22:23.217Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/nabi-7db09/us-central1/on_request_example-2025-05-06T06:22:23.216Z"],"workRunningCount":1}
+[debug] [2025-05-06T06:22:23.217Z] Accepted request GET /nabi-7db09/us-central1/on_request_example --> us-central1-on_request_example
+[debug] [2025-05-06T06:22:23.241Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2025-05-06T06:22:23.243Z] [functions] Got req.url=/nabi-7db09/us-central1/on_request_example, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/nabi-7db09/us-central1/on_request_example, mapping to path=/"}}
+[debug] [2025-05-06T06:22:23.243Z] [worker-pool] submitRequest(triggerId=us-central1-on_request_example) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-on_request_example)"}}
+[info] i  functions: Beginning execution of "us-central1-on_request_example" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"Beginning execution of \"us-central1-on_request_example\""}}
+[debug] [2025-05-06T06:22:23.244Z] [worker-us-central1-on_request_example-d4b9ed5f-16dd-4743-abce-7444009396b1]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"[worker-us-central1-on_request_example-d4b9ed5f-16dd-4743-abce-7444009396b1]: BUSY"}}
+[debug] [2025-05-06T06:22:23.253Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-on_request_example" in 8.42325ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"Finished \"us-central1-on_request_example\" in 8.42325ms"}}
+[debug] [2025-05-06T06:22:23.253Z] [worker-us-central1-on_request_example-d4b9ed5f-16dd-4743-abce-7444009396b1]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"[worker-us-central1-on_request_example-d4b9ed5f-16dd-4743-abce-7444009396b1]: IDLE"}}
+[debug] [2025-05-06T06:22:23.253Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2025-05-06T06:22:23.253Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2025-05-06T06:22:23.253Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
