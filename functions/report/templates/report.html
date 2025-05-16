@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Report - {{ user.name }}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            color: #333;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            background: #fff3d7;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .header img {
+            width: 100px;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+
+        .header-info h1 {
+            margin: 0;
+            font-size: 28px;
+        }
+
+        .header-info .diagnosis {
+            color: #e36a6a;
+            font-weight: bold;
+        }
+
+        .contact {
+            margin-left: auto;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        h2 {
+            margin-top: 40px;
+            font-size: 20px;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 5px;
+        }
+
+        ul {
+            margin-top: 10px;
+        }
+
+        .section {
+            margin-top: 30px;
+        }
+
+        .emoji {
+            font-size: 18px;
+        }
+
+        .highlight {
+            color: #e36a6a;
+            font-weight: bold;
+        }
+
+        .missed {
+            color: #e36a6a;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <img src="{{ user.image_url }}" alt="User Image">
+        <div class="header-info">
+            <h1>{{ user.name }}</h1>
+            <div class="diagnosis">{{ user.diagnosis }}</div>
+        </div>
+        <div class="contact">
+            <div><strong>Phone:</strong> {{ user.phone }}</div>
+            <div><strong>Email:</strong> {{ user.email }}</div>
+            <div><strong>Report Date:</strong> {{ user.report_date }}</div>
+            <div><strong>Period:</strong> {{ user.period }}</div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>1. Header</h2>
+        <p><strong>Name:</strong> {{ user.name }}<br>
+           <strong>Diagnosis:</strong> {{ user.diagnosis }}<br>
+           <strong>Report Date:</strong> {{ user.report_date }}<br>
+           <strong>Period:</strong> {{ user.period }}</p>
+    </div>
+
+    <div class="section">
+        <h2>2. Summary Highlights</h2>
+        <ul>
+            {% for item in user.summary_highlights %}
+            <li>{{ item }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>3. Symptom Overview</h2>
+        {% for symptom in user.symptoms %}
+        <p><strong>[ {{ symptom.name }} ]</strong><br>
+        {{ symptom.detail }}<br>
+        📉 {{ symptom.note }}</p>
+        {% endfor %}
+    </div>
+
+    <div class="section">
+        <h2>4. Medication Adherence</h2>
+        <ul>
+            <li>Taken: {{ user.medication.taken }}</li>
+            <li class="missed">Missed: {{ user.medication.missed }}</li>
+            <li>Overall adherence: {{ user.medication.adherence }}</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>5. To-do</h2>
+        <ul>
+            {% for todo in user.todos %}
+            <li>{{ todo }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>6. Video Check-in Summary</h2>
+        <ul>
+            <li>📹 Video Check-ins: {{ user.checkins.count }}</li>
+            <li>🗣️ Mentioned: {{ user.checkins.mentions }}</li>
+            <li class="emoji">😊 Emotion trend: {{ user.checkins.emotion_trend }}</li>
+        </ul>
+    </div>
+
+</body>
+</html>
