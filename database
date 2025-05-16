@@ -1,0 +1,13 @@
+{
+  "rules": {
+    ".read": true,
+        ".write": true,
+    "chatSessions": {
+      "$sessionId": {
+        ".read": true,
+        ".write": true,
+        ".indexOn": ["time"]
+      }
+    }
+  }
+}

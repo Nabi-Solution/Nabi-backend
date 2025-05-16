@@ -1,0 +1,7 @@
+# requirements.txt
+firebase-functions
+google-generativeai
+google-cloud-firestore
+python-dotenv
+xhtml2pdf
+
